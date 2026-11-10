@@ -24,7 +24,6 @@ if ($Publish) {
     New-Item -ItemType Directory -Force $vendor | Out-Null
     $source = Join-Path $projectRoot 'research/stock/apps/FnKey/FnKey/InsydeDCHU.dll'
     if (Test-Path $source) { Copy-Item -LiteralPath $source -Destination $vendor }
-    Copy-Item -LiteralPath (Join-Path $projectRoot 'research/stock/apps/FnKey/FnKey/cc30wk.exe') -Destination $vendor
     $bridge=Join-Path $vendor 'bridge'
     New-Item -ItemType Directory -Force $bridge | Out-Null
     Copy-Item -LiteralPath (Join-Path $projectRoot 'research/stock/extracted/DefaultComponent/InsydeDCHU.dll') -Destination $bridge

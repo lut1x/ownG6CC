@@ -41,7 +41,6 @@ public partial class MainWindow : Window
         AutoSportToggle.IsChecked = session.Settings.AutoSport;
         RefreshToggle.IsChecked = session.Settings.ManageRefresh;
         LightingToggle.IsChecked = session.Settings.ProfileLighting;
-        NvidiaBatteryToggle.IsChecked = session.Settings.DisableNvidiaOnBattery;
         CpuCurveEditor.Edited += UpdateCurveLabels; GpuCurveEditor.Edited += UpdateCurveLabels;
         Loaded += OnLoaded; Closing += OnClosing;
         SourceInitialized += (_, _) => SetDarkTitle(this);
@@ -160,7 +159,7 @@ public partial class MainWindow : Window
         GameButton.Background=p==Profile.Game?new SolidColorBrush(soft):new SolidColorBrush(Color.FromRgb(41,49,62));
         BatteryButton.Background=p==Profile.Battery?new SolidColorBrush(soft):new SolidColorBrush(Color.FromRgb(41,49,62));
         CpuPolicy.Text=p==Profile.Game?"CPU до 100% · boost включён":p==Profile.Battery?"CPU до 85% · boost выключен":"Boost выключен · меньше нагрева";
-        GpuPolicy.Text=p==Profile.Battery&&session.Settings.DisableNvidiaOnBattery?"RTX отключена штатным компонентом":"Энергосбережение GPU: управляет Windows";
+        GpuPolicy.Text=p==Profile.Battery?"Энергосбережение GPU: управляет Windows":"Гибридная графика · без разгона";
         if(!session.Applied)CpuPolicy.Text="Профиль ещё не применялся";
         CoolButton.Content=session.Cooling?"Охлаждение включено":"Охладить · 60 с";
     }
@@ -228,13 +227,6 @@ public partial class MainWindow : Window
         session.Settings.ManageRefresh=RefreshToggle.IsChecked==true;
         session.Settings.ProfileLighting=LightingToggle.IsChecked==true;
         try{session.Settings.Save();SetStatus("Настройки сохранены · питание и подсветка применятся при выборе профиля");}catch(Exception error){SetStatus(error.Message,true);}
-    }
-    private async void NvidiaBatteryChanged(object sender,RoutedEventArgs e)
-    {
-        if(!initialized)return;
-        session.Settings.DisableNvidiaOnBattery=NvidiaBatteryToggle.IsChecked==true;
-        try { session.Settings.Save(); await Run(session.ApplyBatteryGpuPolicy); RefreshProfile(); }
-        catch(Exception error){SetStatus(error.Message,true);}
     }
     private async Task RefreshStartup()
     {
