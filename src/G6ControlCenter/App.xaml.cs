@@ -18,6 +18,12 @@ public partial class App : System.Windows.Application
         base.OnStartup(e);
         string? Argument(string key){int i=Array.IndexOf(e.Args,key);return i>=0&&i+1<e.Args.Length?e.Args[i+1]:null;}
         string ReportPath(){string path=Path.GetFullPath(Argument("--report")??Path.Combine(AppContext.BaseDirectory,"diagnostic.json"));Directory.CreateDirectory(Path.GetDirectoryName(path)!);return path;}
+        if(e.Args.Contains("--enable-autostart"))
+        {
+            try { await Task.Run(()=>StartupRegistration.SetEnabled(true)); Shutdown(0); }
+            catch(Exception error){ MessageBox.Show(error.Message,"G6 Control");Shutdown(1); }
+            return;
+        }
         if(e.Args.Contains("--startup-check"))
         {
             string report=ReportPath();
