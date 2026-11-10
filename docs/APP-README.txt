@@ -1,4 +1,4 @@
-G6 Control 0.2.0 Portable — личная панель для GIGABYTE G6 MF
+G6 Control 0.3.0 test Portable — личная панель для GIGABYTE G6 MF
 
 Запуск: G6ControlCenter.exe. Нужны права администратора для доступа к штатному драйверу.
 .NET 8 x64 включён в EXE; отдельно устанавливать его не нужно.

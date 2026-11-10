@@ -16,7 +16,7 @@
    <Grid Margin="14,24,14,18"><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
     <StackPanel Margin="8,0,0,26"><Image x:Name="BrandIcon" Width="44" Height="44" HorizontalAlignment="Left"/><TextBlock Text="G6 Control" FontSize="17" FontWeight="SemiBold" Margin="0,10,0,0"/><TextBlock Text="Личная панель" Style="{StaticResource Caption}" Margin="0,4,0,0"/></StackPanel>
     <StackPanel Grid.Row="1"><Button x:Name="HomeNav" Style="{StaticResource Nav}" Click="HomeClick" Background="{DynamicResource SoftAccentBrush}"><StackPanel Orientation="Horizontal"><TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE80F;" Margin="0,0,10,0"/><TextBlock Text="Главная"/></StackPanel></Button><Button x:Name="CoolingNav" Style="{StaticResource Nav}" Click="CoolingClick"><StackPanel Orientation="Horizontal"><TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE713;" Margin="0,0,10,0"/><TextBlock Text="Охлаждение"/></StackPanel></Button></StackPanel>
-    <StackPanel Grid.Row="3" Margin="8,0"><TextBlock Text="0.2.0" Style="{StaticResource Caption}"/><Button Content="Выход" Click="ExitClick" Background="Transparent" Margin="0,15,0,0" Padding="8,7"/></StackPanel>
+    <StackPanel Grid.Row="3" Margin="8,0"><TextBlock Text="0.3.0 test" Style="{StaticResource Caption}"/><Button Content="Выход" Click="ExitClick" Background="Transparent" Margin="0,15,0,0" Padding="8,7"/></StackPanel>
    </Grid>
   </Border>
   <Grid Grid.Row="1" Grid.Column="1"><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
