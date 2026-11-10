@@ -13,7 +13,7 @@ public sealed class PanelSettings
     public bool AutoSport { get; set; }
     public bool ManageRefresh { get; set; } = true;
     public bool ProfileLighting { get; set; } = true;
-    public bool DisableNvidiaOnBattery { get; set; }
+    public bool DisableNvidiaOnBattery { get; set; } = true;
     public FanCurve? CpuCurve { get; set; }
     public FanCurve? GpuCurve { get; set; }
     private static string Path => System.IO.Path.Combine(AppContext.BaseDirectory, "settings.json");
