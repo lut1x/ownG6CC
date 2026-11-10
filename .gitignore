@@ -1,0 +1,15 @@
+# Research downloads and vendor binaries stay local.
+research/upstream/
+research/stock/
+research/local/
+research/tooling/
+research/decompiled/
+bin/
+obj/
+.tools/
+dist/
+research/ui-preview/
+src/**/bin/
+src/**/obj/
+tests/**/bin/
+tests/**/obj/

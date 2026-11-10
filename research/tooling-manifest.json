@@ -1,0 +1,17 @@
+[
+  {
+    "file": "ilspycmd.9.1.0.7988.nupkg",
+    "size": 4183395,
+    "sha256": "2b5058f5ccc164c33b7aabf1a5eb0cf3d3a6af6c145aaf58efd3ed891443af7c"
+  },
+  {
+    "file": "rizin-windows-shared64-v0.9.1.zip",
+    "size": 11731171,
+    "sha256": "45ffa004e26653eaee8d262b8e6eeae09402a7d319c1f20a2ba794bd6af1cc28"
+  },
+  {
+    "file": "unshield-1.6.2-x64.7z",
+    "size": 65799,
+    "sha256": "662fefefc6988a3744ddc6b5b8d2e96ac21876d532f7d23a597c4ca797764a6b"
+  }
+]

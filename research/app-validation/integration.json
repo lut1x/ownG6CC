@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "work": "\u0420\u0430\u0431\u043E\u0442\u0430 \u0432\u043A\u043B\u044E\u0447\u0451\u043D \u00B7 \u042D\u043A\u0440\u0430\u043D 144 \u0413\u0446",
+  "workSnapshot": {
+    "thermal": {
+      "At": "2026-10-31T11:41:17.5599378+00:00",
+      "Cpu": {
+        "Channel": 1,
+        "Temperature": 78,
+        "Duty": 71,
+        "Tachometer": 891,
+        "Rpm": 2420,
+        "Percent": 28
+      },
+      "Gpu": {
+        "Channel": 2,
+        "Temperature": 65,
+        "Duty": 71,
+        "Tachometer": 936,
+        "Rpm": 2304,
+        "Percent": 28
+      }
+    },
+    "battery": {
+      "OnAc": true,
+      "Present": true,
+      "Percent": 100,
+      "Charging": false,
+      "Watts": null,
+      "FullWh": 39.948,
+      "RemainingWh": 39.948,
+      "Seconds": null
+    },
+    "refresh": 144
+  },
+  "chargeResult": "verified 70..80, enabled=True",
+  "chargeRestored": true,
+  "curveResult": "confirmed",
+  "curveRestored": true,
+  "beforeCurve": "00000000C80000C80000C800020080062D473C8050A864FF2D473C9450A863FF000000000000000000000001",
+  "afterCurve": "00000000C80000C80000C800020004062D473C8050CC64FF2D473C9450CC63FF000000000000000000000001"
+}

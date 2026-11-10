@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "before": {
+    "At": "2026-10-31T11:32:52.1582849+00:00",
+    "Cpu": {
+      "Channel": 1,
+      "Temperature": 81,
+      "Duty": 71,
+      "Tachometer": 891,
+      "Rpm": 2420,
+      "Percent": 28
+    },
+    "Gpu": {
+      "Channel": 2,
+      "Temperature": 67,
+      "Duty": 71,
+      "Tachometer": 933,
+      "Rpm": 2311,
+      "Percent": 28
+    }
+  },
+  "maximum": {
+    "At": "2026-10-31T11:32:56.2118598+00:00",
+    "Cpu": {
+      "Channel": 1,
+      "Temperature": 81,
+      "Duty": 255,
+      "Tachometer": 328,
+      "Rpm": 6574,
+      "Percent": 100
+    },
+    "Gpu": {
+      "Channel": 2,
+      "Temperature": 67,
+      "Duty": 255,
+      "Tachometer": 358,
+      "Rpm": 6023,
+      "Percent": 100
+    }
+  },
+  "after": {
+    "At": "2026-10-31T11:32:56.2671875+00:00",
+    "Cpu": {
+      "Channel": 1,
+      "Temperature": 81,
+      "Duty": 255,
+      "Tachometer": 328,
+      "Rpm": 6574,
+      "Percent": 100
+    },
+    "Gpu": {
+      "Channel": 2,
+      "Temperature": 67,
+      "Duty": 255,
+      "Tachometer": 358,
+      "Rpm": 6023,
+      "Percent": 100
+    }
+  },
+  "modeResult": 121,
+  "restored": true,
+  "scope": "Fan maximum for four seconds, then firmware auto; no power/display/RGB changes"
+}

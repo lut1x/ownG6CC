@@ -1,0 +1,88 @@
+[
+  {
+    "name": "gigabyte-fan-battery-center",
+    "url": "https://github.com/Ixmoon/Gigabyte-Fan-Battery-Center.git",
+    "commit": "30edcb21e37319dacacf42453333ea0c743939d3",
+    "fetchedAt": "2026-10-31T10:25:24.1915166+00:00",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "gigactl",
+    "url": "https://github.com/smairio/gigactl.git",
+    "commit": "79ad2d523425db266ef488c93719dd75a268ef8f",
+    "fetchedAt": "2026-10-31T10:25:25.5937686+00:00",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "clevo-fan-control",
+    "url": "https://github.com/XiaoQing235/ClevoFanControl.git",
+    "commit": "3531063f718952cb789353b5c407eb5594cf274e",
+    "fetchedAt": "2026-10-31T10:25:26.9282009+00:00",
+    "licenses": []
+  },
+  {
+    "name": "clevo-x370-control-center",
+    "url": "https://github.com/jiyeguang25/Clevo-X370-Control-Center.git",
+    "commit": "714fed6b2ae62f902e187cbfecfb7cbc0d49a85c",
+    "fetchedAt": "2026-10-31T10:25:29.0938295+00:00",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "custom-clevo-controller",
+    "url": "https://github.com/farukborann/custom-clevo-laptop-controller-windows-app.git",
+    "commit": "844290fda2714935a728aad4804a7172808e7394",
+    "fetchedAt": "2026-10-31T10:25:30.8329708+00:00",
+    "licenses": []
+  },
+  {
+    "name": "clevopycc",
+    "url": "https://github.com/F-19-F/ClevoPyCC.git",
+    "commit": "0ccc4e5ddbdf6dd1a3cc63e3386842224a7e20f9",
+    "fetchedAt": "2026-10-31T10:25:32.0456794+00:00",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "clevo-thermald",
+    "url": "https://github.com/samoylenkodmitry/clevo-thermald.git",
+    "commit": "40fc725f44f85b516c0c6bcc55663031715618f0",
+    "fetchedAt": "2026-10-31T10:25:33.1870902+00:00",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "g-helper",
+    "url": "https://github.com/seerge/g-helper.git",
+    "commit": "0a1538ac4fb0337f6cf3d64a907acde10c91a3d9",
+    "fetchedAt": "2026-10-31T10:25:35.8739715+00:00",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "tuxedo-control-center",
+    "url": "https://github.com/tuxedocomputers/tuxedo-control-center.git",
+    "commit": "8f22135a8525f4c9bd29e1de584b7e49e281f8f9",
+    "fetchedAt": "2026-10-31T10:25:38.7319382+00:00",
+    "licenses": [
+      "COPYING"
+    ]
+  },
+  {
+    "name": "nbfc-revive",
+    "url": "https://github.com/UraniumDonut/nbfc-revive.git",
+    "commit": "0355e1902ca3298abc50bec5825da24a83df26cc",
+    "fetchedAt": "2026-10-31T10:25:40.3786157+00:00",
+    "licenses": [
+      "LICENSE.md"
+    ]
+  }
+]

@@ -1,0 +1,91 @@
+{
+  "scope": "GIGABYTE Control Center 3.0-6.045, G6 MF BIOS FB10",
+  "status": "Static reconstruction plus successful read-only hardware probe; no setters tested",
+  "transport": {
+    "interfaceGuid": "86994c74-ad43-4812-b7e7-0c420b5c5fd7",
+    "dsmGuid": "93f224e4-fbdc-4bbf-add6-db71bdc0afad",
+    "dsmIoctl": "0x322400",
+    "settingsIoctl": "0x32240c",
+    "installedDllSha256": "470d96cae14fef2823330c63ea683cf87cb0f6984dc4eb86d21420ff71be3299",
+    "installedDriverSha256": "be879af2ef1beaa3ad041c30abd103c5e9e872d23ea8442b57682bb0d06ea153"
+  },
+  "functions": [
+    {
+      "name": "fanTelemetry", "access": "read", "verifiedOnLaptop": true,
+      "export": "GetDCHU_Data_Buffer", "command": 12,
+      "channels": [
+        {"id":1,"tachBigEndianOffset":2,"dutyOffset":16,"temperatureRawOffset":18},
+        {"id":2,"tachBigEndianOffset":4,"dutyOffset":19,"temperatureRawOffset":21},
+        {"id":3,"tachBigEndianOffset":6,"dutyOffset":22,"temperatureRawOffset":24}
+      ],
+      "rpmFormula": "tach == 0 ? 0 : round(120 / (5.565217391304348e-5 * tach))",
+      "reference": "decompiled/FanSpeedSetting/FanSpeedSetting/FAN.cs:51"
+    },
+    {
+      "name":"fanCapabilities","access":"read","verifiedOnLaptop":true,
+      "export":"GetDCHU_Data_Buffer","command":13,
+      "fanCountOffset":12,"initialFanModeOffset":14,
+      "customFanStockPredicate":"payload[12] > 1 && (payload[43] & 2) == 0",
+      "reference":"decompiled/FanSpeedSetting/FanSpeedSetting/FAN.cs:66"
+    },
+    {
+      "name":"fanMode","access":"write","verifiedOnLaptop":false,
+      "export":"SetDCHU_Data","command":121,"subcommandHighByte":1,
+      "inputLength":4,"encoding":"LE32(value), then byte[3] = subcommand",
+      "values":{"automatic":0,"maximum":1,"custom":6,"noiseless":8,"ifsc":9},
+      "alsoStores":{"page":4,"offset":5,"length":1},
+      "reference":"decompiled/FanSpeedSetting/FanSpeedSetting/FAN.cs:419"
+    },
+    {
+      "name":"fanOffset","access":"write","verifiedOnLaptop":false,
+      "export":"SetDCHU_Data","command":121,"subcommandHighByte":14,
+      "valueEncoding":"round(percent / 100 * 255)",
+      "alsoStores":{"page":4,"offset":7,"length":1},
+      "reference":"decompiled/FanSpeedSetting/FanSpeedSetting/FAN.cs:449"
+    },
+    {
+      "name":"firmwareCurveLegacy","access":"write","verifiedOnLaptop":false,
+      "export":"SetDCHU_Data","command":14,"inputLength":256,
+      "cpu":{"T2":2,"D2Raw":3,"T3":4,"D3Raw":5},
+      "gpu1":{"T2":6,"D2Raw":7,"T3":8,"D3Raw":9},
+      "gpu2":{"T2":10,"D2Raw":11,"T3":12,"D3Raw":13},
+      "slopeFields":"big-endian uint16 R12/R23/R34 for CPU at 14..19, GPU1 at 20..25, GPU2 at 26..31",
+      "note":"Not a complete standalone recipe: preserve capability constraints, compute slopes, update stored fan data and activate the corresponding mode as required by OEM flow.",
+      "reference":"decompiled/FanSpeedSetting/FanSpeedSetting/FAN.cs:214"
+    },
+    {
+      "name":"powerMode","access":"write","verifiedOnLaptop":false,
+      "export":"SetDCHU_Data","command":121,"subcommandHighByte":25,
+      "inputLength":4,"values":{"quiet":0,"powerSaving":1,"performance":2,"entertainment":3},
+      "alsoStores":{"page":1,"offset":1,"length":1},
+      "note":"Performance mode can additionally set bits 0x80 and 0x40 according to DTT/turbo settings. Full mode switch also has Windows/power-limit/fan side effects in FnKey.Form1.",
+      "reference":"decompiled/FnKey/FnKey/Features.cs:896"
+    },
+    {
+      "name":"chargeWindowRead","access":"read request via Ex API","verifiedOnLaptop":false,
+      "export":"SetDCHU_DataEx","command":4,"inputLength":256,
+      "inputByte0":30,
+      "output":{"enabled":0,"start":1,"stop":2,"allowedStartValues":"16..31","allowedStopValues":"32..47"},
+      "reference":"decompiled/ControlCenter30/ControlCenter30/Window1.cs:2295"
+    },
+    {
+      "name":"chargeWindowWrite","access":"write","verifiedOnLaptop":false,
+      "export":"SetDCHU_DataEx","command":4,"inputLength":256,
+      "input":{"subcommandByte0":31,"enabledByte":1,"startByte":2,"stopByte":3},
+      "reference":"decompiled/ControlCenter30/ControlCenter30/Window1.cs:2571"
+    },
+    {
+      "name":"extendedFanTables","access":"read/write","verifiedOnLaptop":false,
+      "export":"SetDCHU_DataEx","command":4,"inputLength":256,
+      "subcommandByte0":{"readFans12":40,"writeFans12":41,"readFans34":42,"writeFans34":43},
+      "reference":"decompiled/FnKey/FnKey.Device/Interface_FanTable.cs:103"
+    }
+  ],
+  "bufferNotes": [
+    "GetDCHU_Data_Integer returns the integer value itself and stores it through its output pointer; it does not echo the command.",
+    "Inspected GetDCHU_Data_Buffer echoes command on success, returns zero on failure, and copies an extra byte after a buffer element. The read-only probe allocates 4096 bytes.",
+    "Inspected ReadAppSettings returns 4096 on success; length controls the copy to caller, not the return value.",
+    "SetDCHU_DataEx exists in the extracted FnKey/FanSpeedSetting DLLs, but not in the installed DCHU DLL.",
+    "AppSettings are shared stored state, not proof that the corresponding hardware command has taken effect."
+  ]
+}

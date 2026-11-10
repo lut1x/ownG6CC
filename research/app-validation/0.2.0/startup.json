@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "registered": {
+    "Enabled": true,
+    "CurrentLocation": true,
+    "Executable": "C:\\Users\\lut1x1337\\Documents\\G6ControlCenter\\dist\\G6ControlCenter-0.2.0-portable\\G6ControlCenter.exe"
+  },
+  "details": {
+    "highest": true,
+    "interactive": true,
+    "logon": true,
+    "startsOnBattery": true,
+    "keepsRunningOnBattery": true,
+    "arguments": "--tray"
+  },
+  "removed": true,
+  "previousConfigurationRestored": true
+}

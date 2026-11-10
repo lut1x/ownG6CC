@@ -1,0 +1,44 @@
+0x140001128   16 355          fcn.140001128
+0x14000128c   10 231          fcn.14000128c
+0x140001374    4 195          fcn.140001374
+0x140001438    4 242          fcn.140001438
+0x14000152c    4 287          fcn.14000152c
+0x14000164c    4 242          fcn.14000164c
+0x140001740    4 323          fcn.140001740
+0x140001884    4 363          fcn.140001884
+0x1400019f0    4 279          fcn.1400019f0
+0x140001b08    4 323          fcn.140001b08
+0x140001cf0    4 415          fcn.140001cf0
+0x140001ea0    6 40   -> 38   fcn.140001ea0
+0x140001ed0    1 3            fcn.140001ed0
+0x140001ee0   13 139          fcn.140001ee0
+0x140001f8c    5 95           fcn.140001f8c
+0x140001ff0    8 155          fcn.140001ff0
+0x14000208c    1 47           fcn.14000208c
+0x1400020c0    1 43           entry0
+0x1400020ec   14 340  -> 339  fcn.1400020ec
+0x140002280   18 196          fcn.140002280
+0x140002348   21 386  -> 385  fcn.140002348
+0x1400024cc   18 212          fcn.1400024cc
+0x1400025a1    1 6            sub.WppRecorder.sys_WppAutoLogTrace
+0x1400025a7    1 6            sub.WppRecorder.sys_WppAutoLogStart
+0x1400025ad    1 6            sub.WppRecorder.sys_WppAutoLogStop
+0x1400025b9    1 6            sub.WDFLDR.SYS_WdfVersionBind
+0x1400025bf    1 6            sub.WDFLDR.SYS_WdfVersionUnbind
+0x1400025d0    1 6            sub.WDFLDR.SYS_WdfVersionBindClass
+0x1400025e0    1 6            sub.WDFLDR.SYS_WdfVersionUnbindClass
+0x140002640   40 682  -> 537  fcn.140002640
+0x140002900   18 387  -> 303  fcn.140002900
+0x140002ac0    1 38           fcn.140002ac0
+0x140006000   39 1374         fcn.140006000
+0x140006560   15 428          fcn.140006560
+0x14000670c   11 367          fcn.14000670c
+0x14000687c   14 461          fcn.14000687c
+0x140006a4c   27 935          fcn.140006a4c
+0x140006df4    4 398          fcn.140006df4
+0x140007394   11 157          fcn.140007394
+0x140007434    9 199          fcn.140007434
+0x1400074fc    6 250          fcn.1400074fc
+0x140007988    6 225          fcn.140007988
+0x140008000   11 457          fcn.140008000
+0x1400081cc    4 47   -> 46   fcn.1400081cc

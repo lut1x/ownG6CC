@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "error": null,
+  "snapshot": {
+    "thermal": {
+      "At": "2026-10-31T11:31:43.2341311+00:00",
+      "Cpu": {
+        "Channel": 1,
+        "Temperature": 82,
+        "Duty": 71,
+        "Tachometer": 891,
+        "Rpm": 2420,
+        "Percent": 28
+      },
+      "Gpu": {
+        "Channel": 2,
+        "Temperature": 67,
+        "Duty": 71,
+        "Tachometer": 930,
+        "Rpm": 2319,
+        "Percent": 28
+      }
+    },
+    "battery": {
+      "OnAc": true,
+      "Present": true,
+      "Percent": 100,
+      "Charging": false,
+      "Watts": null,
+      "FullWh": 39.948,
+      "RemainingWh": 39.948,
+      "Seconds": null
+    },
+    "cpuLoad": null,
+    "refresh": 144,
+    "warning": null
+  },
+  "charge": {
+    "Enabled": false,
+    "Start": 95,
+    "Stop": 100,
+    "Starts": "KDI8RlBf",
+    "Stops": "PEZQWmQ="
+  },
+  "chargeStatus": "\u0414\u043E\u0441\u0442\u0443\u043F\u0435\u043D",
+  "curveSupported": true
+}
